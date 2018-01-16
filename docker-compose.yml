@@ -1,0 +1,12 @@
+version: '2'
+services:
+  youtrack:
+      image:            "oleksiichernomaz/youtrack:2017.4"
+      container_name:   youtrack
+      volumes:
+          - "./backups/:/var/lib/youtrack/backups"
+          - "./data/:/var/lib/youtrack/data"
+          - "./logs/:/var/lib/youtrack/logs"
+          - "./temp/:/var/lib/youtrack/temp"
+      ports:
+          - "9009:8080"
